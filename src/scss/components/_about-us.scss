@@ -1,0 +1,96 @@
+.about-us {
+  padding-top: 32.8rem;
+
+  @include mediaQuery(pxToRem($tablet)) {
+    padding-top: 19rem;
+  }
+
+  @include mediaQuery(pxToRem($desktop)) {
+    padding-top: 28.3rem;
+  }
+
+  &__img-container {
+    position: absolute;
+    top: -23.1rem;
+    height: 28.1rem;
+    align-self: center;
+    z-index: -1;
+
+    @include mediaQuery(pxToRem($tablet)) {
+      top: -15.5rem;
+      left: -17.1rem;
+    }
+
+    @include mediaQuery(pxToRem($desktop)) {
+      height: 47.7rem;
+      top: -17.5rem;
+      left: -38.1rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__text-container {
+    background-color: $color-purple;
+    position: relative;
+    text-align: center;
+    padding: 3.2rem 3.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mediaQuery(pxToRem($tablet)) {
+      margin-left: 17.4rem;
+      padding: 4.8rem 5.6rem 5.6rem 5.6rem;
+      text-align: start;
+    }
+
+    @include mediaQuery(pxToRem($desktop)) {
+      margin-left: 37.4rem;
+      padding: 6.4rem;
+    }
+  }
+
+  &__description {
+    @include text;
+    margin-bottom: 2.4rem;
+
+    @include mediaQuery(pxToRem($tablet)) {
+      text-align: start;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1.6rem;
+
+    @include mediaQuery(pxToRem($tablet)) {
+      margin-bottom: 3.4rem;
+    }
+  }
+
+  &__button {
+    @include mediaQuery(pxToRem($tablet)) {
+      align-self: flex-start;
+    }
+  }
+
+  &__wire {
+    display: none;
+    
+    @include mediaQuery(pxToRem($tablet)) {
+      display: block;
+      position: absolute;
+      bottom: -11rem;
+      right: 1rem;
+    }
+
+    @include mediaQuery(pxToRem($desktop)) {
+      bottom: -7rem;
+      right: 7rem;
+    }
+  }
+}

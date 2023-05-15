@@ -1,0 +1,27 @@
+.footer {
+  padding: 7.4rem 0 6.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 5.7rem;
+
+  @include mediaQuery(pxToRem($tablet)) {
+    gap: 4.7rem;
+  }
+
+  @include mediaQuery(pxToRem($desktop)) {
+    padding-top: 13.4rem;
+  }
+
+  &__social-icon-container {
+    display: flex;
+    gap: 2.8rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__social-link path:hover {
+    fill: $color-purple;
+  }
+}

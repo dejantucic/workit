@@ -1,0 +1,20 @@
+.header {
+  position: absolute;
+  left: 0;
+  top: 3.2rem;
+  width: 100%;
+  z-index: 10;
+
+  @include mediaQuery(pxToRem($desktop)) {
+    top: 5.7rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link {
+    padding: 0;
+  }
+}

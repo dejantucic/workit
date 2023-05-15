@@ -1,0 +1,122 @@
+.our-work {
+  position: relative;
+  background-color: $color-ghost-white;
+  border-bottom-left-radius: 50% 5%;
+  border-bottom-right-radius: 50% 5%;
+  padding: 15.5rem 0 9.1rem;
+
+  @include mediaQuery(pxToRem($tablet)) {
+    padding: 20.3rem 0 17.1rem;
+  }
+
+  @include mediaQuery(pxToRem($desktop)) {
+    padding-top: 25.5rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10rem;
+    height: 10rem;
+    width: 100%;
+    background-color: $color-ghost-white;
+    z-index: -5;
+  }
+
+  &__img-container {
+    position: relative;
+    margin: -25rem 0 5.5rem 2rem;
+
+    @include mediaQuery(pxToRem($tablet)) {
+      margin: -35rem 0 5.5rem 11rem;
+      width: 75%;
+    }
+
+    @include mediaQuery(pxToRem($desktop)) {
+      margin: -53rem 0 5.5rem 19rem;
+      width: 69%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    @include mediaQuery(pxToRem($tablet)) {
+      padding: 0 5.8rem;
+    }
+
+    @include mediaQuery(pxToRem($desktop)) {
+      flex-direction: row;
+      padding: 2rem 0 0 0;
+
+      & > * {
+        flex: 1;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    @include mediaQuery(pxToRem($tablet)) {
+      flex-direction: row;
+      text-align: start;
+      gap: 3.2rem;
+    }
+
+    @include mediaQuery(pxToRem($desktop)) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__item-number {
+    color: $color-purple;
+    font: 600 2rem/1.8 $secondary-font;
+    border: 1px solid $color-grey;
+    border-radius: 3.5rem;
+    text-align: center;
+    align-self: center;
+    padding: 0.5rem 1.8rem;
+    margin-bottom: 2.4rem;
+
+    @include mediaQuery(pxToRem($desktop)) {
+      padding: 1rem 2.2rem;
+    }
+  }
+
+  &__item-heading {
+    margin-bottom: 1rem;
+    
+    @include mediaQuery(pxToRem($tablet)) {
+      margin-bottom: 1.6rem;
+    }
+
+    @include mediaQuery(pxToRem($tablet)) {
+      margin-bottom: 2.9rem;
+    }
+  }
+
+  &__item-description {
+    color: $color-grey;
+    @include text;
+
+    @include mediaQuery(pxToRem($tablet)) {
+      text-align: start;
+    }
+
+    @include mediaQuery(pxToRem($desktop)) {
+      text-align: center;
+    }
+  }
+}
